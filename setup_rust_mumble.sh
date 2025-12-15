@@ -106,7 +106,7 @@ After=network.target
 [Service]
 User=root
 WorkingDirectory=/root/rust-mumble
-ExecStart=/root/rust-mumble/target/release/rust-mumble --cert /root/rust-mumble/cert.pem --key /root/rust-mumble/key.pem --listen 0.0.0.0:55500 --http-listen 0.0.0.0:8080 --http-password dummy
+ExecStart=/root/rust-mumble/target/release/rust-mumble --cert /root/rust-mumble/cert.pem --key /root/rust-mumble/key.pem --listen 0.0.0.0:30220 --http-listen 0.0.0.0:8080 --http-password dummy
 Restart=always
 LimitNOFILE=1048576
 
@@ -145,8 +145,8 @@ success "System-wide limits configured"
 
 # Configure firewall
 step "Configuring firewall rules"
-sudo ufw allow 55500/tcp &>/dev/null
-sudo ufw allow 55500/udp &>/dev/null
+sudo ufw allow 30220/tcp &>/dev/null
+sudo ufw allow 30220/udp &>/dev/null
 sudo ufw allow 8080/tcp &>/dev/null
 sudo systemctl enable ufw &>/dev/null
 sudo ufw enable &>/dev/null &
