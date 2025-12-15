@@ -22,4 +22,4 @@ Set up the special VPS server within minutes using our quick and painless set up
 Run the following command to **automatically install and set up Rust-Mumble**:
 
 ```bash
-git clone https://github.com/1-of-1-Servers/setup-rust-mumble.git && cd setup-rust-mumble && chmod +x setup_rust_mumble.sh && sudo ./setup_rust_mumble.sh
+git clone https://github.com/Djowman/setup-rust-mumble.git && cd setup-rust-mumble && chmod +x setup_rust_mumble.sh && sudo ./setup_rust_mumble.sh
